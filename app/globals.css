@@ -1,27 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.ThinScrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.ThinScrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #e1e1f4;
+  border-radius: 10px;
+}
+
+/* Handle */
+.ThinScrollbar::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+  color: gray;
+}
+
+.HideScroll::-webkit-scrollbar {
+  width: 0px !important;
+  height: 0px !important;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
